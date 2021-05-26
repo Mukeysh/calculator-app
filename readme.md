@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Mukeysh/calculator-app/tree/main)
-- Live Site URL: [Add live site URL here](https://60adf0c30b10fe6bb8f155fb--reverent-bartik-9903f6.netlify.app/)
+- Solution URL: [](https://github.com/Mukeysh/calculator-app/tree/main)
+- Live Site URL: [](https://60adf0c30b10fe6bb8f155fb--reverent-bartik-9903f6.netlify.app/)
 
 ### Built with
 
