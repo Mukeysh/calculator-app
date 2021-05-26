@@ -174,7 +174,8 @@ button {
   position: relative;
 }
 
-button:active {
+button:active,
+[data-state="selected"] {
   top: 4px;
   box-shadow: none;
 }
