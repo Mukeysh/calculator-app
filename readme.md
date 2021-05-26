@@ -15,12 +15,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./screenshot.png)
 
 ### Links
 
-- Solution URL: [(https://github.com/Mukeysh/calculator-app/tree/main)]
-- Live Site URL: [(https://60adf0c30b10fe6bb8f155fb--reverent-bartik-9903f6.netlify.app/)]
+- Solution URL: [Solution Url](https://github.com/Mukeysh/calculator-app/tree/main)
+- Live Site URL: [Site Url](https://60adf0c30b10fe6bb8f155fb--reverent-bartik-9903f6.netlify.app/)
 
 ### Built with
 
