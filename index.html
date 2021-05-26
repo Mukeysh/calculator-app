@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="calculator__top">
+          <h1>calc</h1>
+          <div class="calculator__toggle">
+            <h6>THEME</h6>
+            <form class="form">
+              <div class="form-item">
+                <label for="default">1</label>
+                <input type="radio" id="default" name="themeSwitch" checked />
+              </div>
+              <div class="form-item">
+                <label for="light">2</label>
+                <input type="radio" id="light" name="themeSwitch" />
+              </div>
+              <div class="form-item">
+                <label for="purple">3</label>
+                <input type="radio" id="purple" name="themeSwitch" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="calculator__result">0</div>
+        <div class="calculator__keys">
+          <button class="one" value="1">1</button>
+          <button class="two" value="2">2</button>
+          <button class="three" value="3">3</button>
+          <button class="four" value="4">4</button>
+          <button class="five" value="5">5</button>
+          <button class="six" value="6">6</button>
+          <button class="seven" value="7">7</button>
+          <button class="eight" value="8">8</button>
+          <button class="nine" value="9">9</button>
+          <button class="zero" value="0">0</button>
+          <button class="del" value="del">DEL</button>
+          <button class="plus" value="+">+</button>
+          <button class="minus" value="-">-</button>
+          <button class="multiply" value="*">&times;</button>
+          <button class="divide" value="/">/</button>
+          <button class="dot" value=".">.</button>
+          <button class="equal" value="=">=</button>
+          <button class="reset" value="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="style.js"></script>
+    <script src="calculate.js"></script>
+  </body>
+</html>

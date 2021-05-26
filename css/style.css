@@ -1,0 +1,274 @@
+/* variable */
+:root {
+  --main-background: hsl(222, 26%, 31%);
+  --toggle-background: hsl(223, 31%, 20%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  --key-background1: hsl(225, 21%, 49%);
+  --key-background1-shadow: hsl(224, 28%, 35%);
+
+  --key-background2: hsl(6, 63%, 50%);
+  --key-background2-shadow: hsl(6, 70%, 34%);
+
+  --key-background3: hsl(30, 25%, 89%);
+  --key-background3-shadow: hsl(28, 16%, 65%);
+
+  --text-keypad: hsl(221, 14%, 31%);
+  --text-white: #fff;
+
+  --font-family: "Spartan", sans-serif;
+  --font-size: 2rem;
+}
+
+[data-theme="light"] {
+  --main-background: hsl(0, 0%, 90%);
+  --toggle-background: hsl(0, 5%, 81%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background1: hsl(185, 42%, 37%);
+  --key-background1-shadow: hsl(185, 58%, 25%);
+
+  --key-background2: hsl(25, 98%, 40%);
+  --key-background2-shadow: hsl(25, 99%, 27%);
+
+  --key-background3: hsl(45, 7%, 89%);
+  --key-background3-shadow: hsl(35, 11%, 61%);
+
+  --text-keypad: hsl(221, 14%, 31%);
+}
+
+[data-theme="purple"] {
+  --main-background: hsl(268, 75%, 9%);
+  --toggle-background: hsl(268, 71%, 12%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --key-background1: hsl(281, 89%, 26%);
+  --key-background1-shadow: hsl(285, 91%, 52%);
+
+  --key-background2: hsl(176, 100%, 44%);
+  --key-background2-shadow: hsl(177, 92%, 70%);
+
+  --key-background3: hsl(268, 47%, 21%);
+  --key-background3-shadow: hsl(290, 70%, 36%);
+
+  --text-keypad: hsl(52, 100%, 62%);
+  --text-equal: hsl(198, 20%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background: var(--main-background);
+  font-weight: 700;
+}
+h1 {
+  font-size: 2rem;
+  color: var(--text-white);
+}
+
+.container {
+  max-width: 31rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 1rem;
+}
+
+.calculator__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.calculator__toggle {
+  display: flex;
+  align-items: baseline;
+}
+
+.calculator__toggle h6 {
+  color: var(--text-white);
+  font-size: 0.8125rem;
+  margin-right: 1rem;
+}
+
+.calculator__toggle form {
+  display: flex;
+  background: var(--toggle-background);
+  padding: 0.4375rem 0;
+  border-radius: 0.9375rem;
+}
+
+.calculator__toggle .form-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 0 5px;
+}
+
+.calculator__toggle label {
+  font-size: 0.8125rem;
+  color: var(--text-white);
+  position: absolute;
+  top: -1.6875rem;
+  left: 8px;
+}
+
+.calculator__toggle input {
+  visibility: hidden;
+  position: relative;
+}
+.calculator__toggle input:checked {
+  visibility: visible;
+}
+
+.calculator__toggle input:before {
+  content: "";
+  background: var(--key-background2);
+  width: 0.9375rem;
+  height: 0.9375rem;
+  display: inline-block;
+  position: absolute;
+  top: -1px;
+  border-radius: 50%;
+}
+
+.calculator__keys {
+  background: var(--keypad-background);
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem 1.2rem;
+  grid-template-areas:
+    "seven eight nine del"
+    "four five six plus"
+    "one two three minus"
+    "dot zero divide multiply"
+    "reset reset equal equal";
+}
+
+button {
+  font-size: var(--font-size);
+  font-weight: 700;
+  color: var(--text-keypad);
+  border: 0;
+  background: var(--key-background3);
+  border-radius: 0.625rem;
+  padding: 0.8rem 0.625rem 0.5rem;
+  box-shadow: 0px 4px 0px var(--key-background3-shadow);
+  line-height: normal;
+  cursor: pointer;
+  position: relative;
+}
+
+button:active {
+  top: 4px;
+  box-shadow: none;
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+}
+.dot {
+  grid-area: dot;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.reset {
+  grid-area: reset;
+}
+.del {
+  grid-area: del;
+}
+.multiply {
+  grid-area: multiply;
+}
+.divide {
+  grid-area: divide;
+}
+.equal {
+  grid-area: equal;
+  background: var(--key-background2);
+  box-shadow: 0px 4px 0px var(--key-background2-shadow);
+  color: var(--text-white);
+}
+
+.del,
+.reset {
+  background: var(--key-background1);
+  color: var(--text-white);
+  box-shadow: 0px 4px 0px var(--key-background1-shadow);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.calculator__result {
+  background: var(--screen-background);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  margin-bottom: 20px;
+  color: var(--text-white);
+  text-align: right;
+}
+
+[data-theme="light"] .calculator__result,
+[data-theme="light"] h1,
+[data-theme="light"] .calculator__toggle h6,
+[data-theme="light"] .calculator__toggle label {
+  color: var(--text-keypad);
+}
+
+[data-theme="purple"] .equal {
+  color: var(--text-equal);
+}
+
+[data-theme="purple"] .calculator__result,
+[data-theme="purple"] .calculator__toggle h6,
+[data-theme="purple"] h1,
+[data-theme="purple"] .calculator__toggle label {
+  color: var(--text-keypad);
+}
